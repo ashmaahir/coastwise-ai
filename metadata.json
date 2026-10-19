@@ -1,0 +1,6 @@
+{
+  "name": "CoastWise AI",
+  "description": "Agricultural extension evidence support tool for salinity, flooding, and rainfall in coastal Bangladesh.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
