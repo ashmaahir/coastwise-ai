@@ -459,7 +459,7 @@ have been checked.
 `;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-3.8-flash',
+      model: 'gemini-flash-latest',
       contents: userPrompt,
       config: {
         systemInstruction,
@@ -483,7 +483,7 @@ have been checked.
       ...parsed,
       sources: referenceSources,
       isFallback: false,
-      modelUsed: 'gemini-3.8-flash',
+      modelUsed: 'gemini-flash-latest',
       language,
       disclaimer:
         'AI-generated preliminary research response. Claims and external references have not been independently verified by this application. Not field-validated; not an official advisory or emergency warning service.',
