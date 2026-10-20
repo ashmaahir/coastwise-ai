@@ -68,17 +68,26 @@ export const QuestionInput: React.FC<QuestionInputProps> = ({
           </div>
 
           <div className="flex flex-wrap gap-2">
-            {promptList.map((prompt, index) => (
-              <button
-                key={`${index}-${prompt}`}
-                type="button"
-                onClick={() => onChangeQuestion(prompt)}
-                disabled={isLoading}
-                className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-2 text-left text-xs text-emerald-800 transition-colors hover:bg-emerald-100 disabled:cursor-not-allowed disabled:opacity-50"
-              >
-                {prompt}
-              </button>
-            ))}
+            {promptList.map((prompt, index) => {
+              const promptText =
+                typeof prompt === 'string'
+                  ? prompt
+                  : language === 'bn'
+                    ? prompt.bn
+                    : prompt.en;
+
+              return (
+                <button
+                  key={`${index}-${language}`}
+                  type="button"
+                  onClick={() => onChangeQuestion(promptText)}
+                  disabled={isLoading}
+                  className="rounded-full border border-emerald-200 bg-emerald-50 px-3 py-2 text-left text-xs text-emerald-800 transition-colors hover:bg-emerald-100 disabled:cursor-not-allowed disabled:opacity-50"
+                >
+                  {promptText}
+                </button>
+              );
+            })}
           </div>
         </div>
       )}
