@@ -4,16 +4,17 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+
 import React, { useState } from 'react';
 import { TopicType, AnalysisResult, DemoScenario } from './types.ts';
-import { Header } from './Header.tsx';
-import { TopicSelector } from './TopicSelector.tsx';
-import { StudyAreaSelector } from './StudyAreaSelector.tsx';
-import { QuestionInput } from './QuestionInput.tsx';
-import { StructuredResult } from './StructuredResult.tsx';
-import { FarmerSummaryModal } from './FarmerSummaryModal.tsx';
-import { DemonstrationView } from './DemonstrationView.tsx';
-import { ValidationView } from './ValidationView.tsx';
+import { Header } from './components/Header.tsx';
+import { TopicSelector } from './components/TopicSelector.tsx';
+import { StudyAreaSelector } from './components/StudyAreaSelector.tsx';
+import { QuestionInput } from './components/QuestionInput.tsx';
+import { StructuredResult } from './components/StructuredResult.tsx';
+import { FarmerSummaryModal } from './components/FarmerSummaryModal.tsx';
+import { DemonstrationView } from './components/DemonstrationView.tsx';
+import { ValidationView } from './components/ValidationView.tsx';
 import {
   AlertCircle,
   Leaf,
